@@ -1,39 +1,19 @@
 "use strict";
 
-var arr = [1, 2, 3, 4, 5, 6]; // usando arrow functions
-// funções normal
+// ADICIONANDO VALOR PADRÃO PARA UMA FUNÇÃO
+function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
+}
 
-var newArr = arr.map(function (item) {
-  return item * 2;
-}); // função anonima
+console.log(soma(1));
+console.log(soma());
 
-var newArrArrow = arr.map(function (item) {
-  return item * 2;
-});
-
-var teste = function teste() {
-  return "teste";
+var soma2 = function soma2() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
+  return a + b;
 };
 
-var teste2 = function teste2() {
-  return [1, 2, 3, 4, 5];
-};
-
-var teste3 = function teste3() {
-  return {
-    nome: 'carlos henrique'
-  };
-};
-
-var teste4 = function teste4() {
-  return {
-    nome: "carlos henrique"
-  };
-};
-
-console.log(arr);
-console.log(newArr);
-console.log(newArrArrow);
-console.log(teste);
-console.log(teste2);
-console.log(teste3);
+console.log(soma());
