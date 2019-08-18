@@ -15,13 +15,17 @@ var usuario = {
 // const { nome, idade } = usuario;
 // console.log(nome);
 // console.log(idade);
-
-var nome = usuario.nome,
-    idade = usuario.idade,
-    _usuario$endereco = usuario.endereco,
-    cidade = _usuario$endereco.cidade,
-    estado = _usuario$endereco.estado;
-console.log(cidade);
-console.log(estado); // const { cidade, estado } = usuario.endereco;
+// const { nome, idade, endereco: { cidade, estado } } = usuario;
 // console.log(cidade);
 // console.log(estado);
+// const { cidade, estado } = usuario.endereco;
+// console.log(cidade);
+// console.log(estado);
+
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
+}
+
+mostraNome(usuario);

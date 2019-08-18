@@ -17,15 +17,20 @@ const usuario = {
 // console.log(nome);
 // console.log(idade);
 
-const { nome, idade, endereco: { cidade, estado } } = usuario;
-console.log(cidade);
-console.log(estado);
-
-
+// const { nome, idade, endereco: { cidade, estado } } = usuario;
+// console.log(cidade);
+// console.log(estado);
 
 // const { cidade, estado } = usuario.endereco;
 // console.log(cidade);
 // console.log(estado);
+
+function mostraNome({nome, idade}) {
+    console.log(nome, idade);
+}
+
+mostraNome(usuario);
+
 
 
 
