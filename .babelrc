@@ -1,0 +1,4 @@
+// preset-env entenderá qual o ambiente que estamos trabalhando
+{
+    "presets": ["@babel/preset-env"]
+}
