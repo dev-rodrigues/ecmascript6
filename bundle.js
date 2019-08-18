@@ -1,31 +1,42 @@
-// constantes não podem ter seu valor reatribuído;
-// const = read-only, ou seja, após definido o seu valor
-// constantes permitem somente leitura;
-// const a = 1;
-// console.log(a);
-// a = 3;
-// console.log(a);
-////////////////////////////////////////////////////////////
-// podemos mutar uma constante
-// const usuario = {
-//     nome: "carlos henrique"
-// }
-// console.log(usuario.nome);
-// usuario.nome = "Diego";
-// console.log(usuario.nome);
-////////////////////////////////////////////////////////////
-// let tem seu valor visivel dentro do escopo da função
-// function teste(x) {
-//     let y = 2;
-//     console.log(y);
-//     if (x > 5) {
-//         // variavel y pode ser acessada daqui
-//         let y = 4;
-//         console.log(x, y);
-//     }
-// }
-// // variavel y não é acessivel daqui
-// //  console.log(y);
-// console.log(teste(10));
-////////////////////////////////////////////////////////////
 "use strict";
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 9];
+console.log(arr); // USANDO MAP
+//  const newArr = arr.map(function(item)) {     
+//      return item *2;
+//  });
+//  console.log(newArr);
+//  const newArr = arr.map(function(item, index)) {     
+//      return item * index;
+//  });
+//  console.log(newArr);
+////////////////////////////////////////////////////////////
+// USANDO REDUCE
+//  const sun = arr.reduce(function(total, next) {
+//     return total + next;
+//  });
+// primeira passada:
+// total = 0
+// next = 1
+// segunda passada
+// total = 1;
+// next = 2;
+// terceira passada
+// total = 3;
+// next = 3;
+// console.log(sun);
+////////////////////////////////////////////////////////////
+// USANDO O FILTER
+// retorna um novo vetor
+// const filter =  arr.filter(function(item) {
+//     return item % 2 === 0;
+// });
+// console.log(filter);
+////////////////////////////////////////////////////////////
+// USANDO O FIND
+// quando localiza o elemento: retorna o elemento
+// quando não localiza o elemento: retorna undefined
+// const find = arr.find(function(item) {
+//     return item === 4;
+// });
+// console.log(find);
