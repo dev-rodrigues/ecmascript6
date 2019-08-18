@@ -1,19 +1,27 @@
 "use strict";
 
-// ADICIONANDO VALOR PADRÃO PARA UMA FUNÇÃO
-function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return a + b;
-}
+var usuario = {
+  nome: "carlos",
+  idade: 24,
+  endereco: {
+    cidade: "Rio de janeiro",
+    estado: "RJ"
+  }
+}; // console.log(usuario);
+// console.log(usuario.nome);
+// console.log(usuario.idade);
+// console.log(usuario.endereco.cidade);
+// // usando Desestruturação
+// const { nome, idade } = usuario;
+// console.log(nome);
+// console.log(idade);
 
-console.log(soma(1));
-console.log(soma());
-
-var soma2 = function soma2() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
-  return a + b;
-};
-
-console.log(soma());
+var nome = usuario.nome,
+    idade = usuario.idade,
+    _usuario$endereco = usuario.endereco,
+    cidade = _usuario$endereco.cidade,
+    estado = _usuario$endereco.estado;
+console.log(cidade);
+console.log(estado); // const { cidade, estado } = usuario.endereco;
+// console.log(cidade);
+// console.log(estado);
