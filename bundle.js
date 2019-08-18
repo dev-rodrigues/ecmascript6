@@ -45,10 +45,21 @@ function (_List) {
   _inherits(TodoList, _List);
 
   function TodoList() {
+    var _this;
+
     _classCallCheck(this, TodoList);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(TodoList).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoList).call(this));
+    _this.usuario = "carlos henrique";
+    return _this;
   }
+
+  _createClass(TodoList, [{
+    key: "monstraUsuario",
+    value: function monstraUsuario() {
+      console.log(this.usuario);
+    }
+  }]);
 
   return TodoList;
 }(List);
@@ -58,3 +69,5 @@ var MinhaLista = new TodoList();
 document.getElementById('novoTodo').onclick = function () {
   MinhaLista.add('Estou usando herança');
 };
+
+MinhaLista.monstraUsuario();
